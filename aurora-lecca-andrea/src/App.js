@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <NavBar />
-    <ItemListContainer texto= 'Bienvenidos a Shop online Aurora!' /> 
+    <ItemListContainer /> 
     </>
     
   );

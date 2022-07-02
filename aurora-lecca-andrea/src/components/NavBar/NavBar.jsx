@@ -15,8 +15,14 @@ function NavBar() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">INICIO</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">JOYAS</a>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">JOYAS</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">ANILLOS</a></li>
+                                    <li><a class="dropdown-item" href="#">COLLARES</a></li>
+                                    <li><a class="dropdown-item" href="#">AROS</a></li>
+                                    <li><a class="dropdown-item" href="#">PULSERAS</a></li>
+                                </ul>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">GIFS</a>
