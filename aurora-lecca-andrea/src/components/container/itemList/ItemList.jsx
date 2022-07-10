@@ -1,23 +1,34 @@
 import React from 'react'
 import { Item } from '../item/Item.js'
 import { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import './itemList.css'
 
 
 const ItemList = ({itemlist}) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] =useState(true)
+    const {categoriaId} = useParams()
 
     useEffect(() => {
-        Item 
-        .then(resp => setProducts(resp))
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    }, [])
-    console.log(products)
+        if (categoriaId) {
+            Item 
+            .then(resp => setProducts(resp.filter(prod => prod.categoria === categoriaId)))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        }else {
+            Item 
+            .then(resp => setProducts(resp))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        }
+
+
+    }, [categoriaId])
+    console.log(categoriaId)
 
     return(
-        <div>
+        <div className="contenedorCards">
                {loading ? <h2>Cargando...</h2> 
                 :
                 products.map(prod =>
@@ -26,14 +37,16 @@ const ItemList = ({itemlist}) => {
                                                  <div className="card-header">
                                                      {`${prod.name} - ${prod.categoria}`}
                                                 </div>
-                                                 <div className="card-body">
+                                                 <div className="card-body" id="cardProducto">
                                                     <img src={prod.foto} alt='' className="w-50"/>
                                                     {prod.precio}
                                                 </div>
                                                 <div className="card-footer">
+                                                    <Link to={`/detail/${prod.id}`}>
                                                         <button className="btn btn-outline-primary btn-block">
                                                                 VER MÁS
                                                         </button>
+                                                    </Link>
                                                 </div>
                                         </div>
                                     </div>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,800&display=swap');
+.contenedorDetalle {
+    margin: 3rem 5rem;
+}
+.imgDetalle{
+    width: 100%;
+}
+.contenedor-flex {
+    display: flex;
+    flex-direction: row;
+
+}
+.detalle{
+      padding: 2rem;
+}
+.tituloDetalle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #111111;
+}
+.subtituloDetalle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #111111;
+}
+.precioDetalle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #111111;
+}
+.parrafoDetalle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #111111;
+}

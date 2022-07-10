@@ -1,0 +1,22 @@
+.card-header:first-child{
+    text-align: center;
+}
+.card-footer:last-child{
+    text-align: center;
+}
+#cardProducto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+    .contenedorCards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
