@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item } from '../item/Item.js'
+import { Catalogo } from '../item/Item.js'
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './itemList.css'
@@ -12,12 +12,12 @@ const ItemList = ({itemlist}) => {
 
     useEffect(() => {
         if (categoriaId) {
-            Item 
+            Catalogo
             .then(resp => setProducts(resp.filter(prod => prod.categoria === categoriaId)))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         }else {
-            Item 
+            Catalogo
             .then(resp => setProducts(resp))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))

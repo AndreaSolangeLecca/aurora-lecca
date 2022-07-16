@@ -1,0 +1,15 @@
+.cajaContador {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 3px 4px 14px -4px hsl(153deg 8% 48% / 72%);
+    border-radius: 15px;
+}
+.container-counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}

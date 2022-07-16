@@ -19,7 +19,7 @@ let productos =[
     {id: '18' , categoria: 'Aros', name: 'Aros Amour', precio: '5.600' , foto: './img/aros03.jpg'} ,
 ];
 
-export const Item = new Promise((resolve, reject) =>{
+export const Catalogo = new Promise((resolve, reject) =>{
     let condition = true
     if(condition) {
         setTimeout(() =>{
