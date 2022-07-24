@@ -4,6 +4,18 @@ import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './itemList.css'
 
+const Loading = () =>{
+    useEffect(() =>{
+        console.log('loading')
+        return() => console.log('desmontando loading')
+    })
+
+    return(
+        <div>
+            <h1>Cargando...</h1>
+        </div>
+    )
+}
 
 const ItemList = ({itemlist}) => {
     const [products, setProducts] = useState([])
@@ -25,29 +37,29 @@ const ItemList = ({itemlist}) => {
 
 
     }, [categoriaId])
-    console.log(categoriaId)
+
 
     return(
         <div className="contenedorCards">
-               {loading ? <h2>Cargando...</h2> 
+               {loading ? <Loading/>
                 :
                 products.map(prod =>
                                     <div key={prod.id} className="col-md-4 p-1">
                                         <div className="card w-100 mt-5">
-                                                 <div className="card-header">
-                                                     {`${prod.name} - ${prod.categoria}`}
-                                                </div>
-                                                 <div className="card-body" id="cardProducto">
-                                                    <img src={prod.foto} alt='' className="w-50"/>
-                                                    {prod.precio}
-                                                </div>
-                                                <div className="card-footer">
-                                                    <Link to={`/detail/${prod.id}`}>
-                                                        <button className="btn btn-outline-primary btn-block">
-                                                                VER MÁS
-                                                        </button>
-                                                    </Link>
-                                                </div>
+                                                    <div className="card-header">
+                                                        {`${prod.name} - ${prod.categoria}`}
+                                                    </div>
+                                                    <div className="card-body" id="cardProducto">
+                                                        <img src={prod.foto} alt='' className="w-50"/>
+                                                        {prod.precio}
+                                                    </div>
+                                                    <div className="card-footer">
+                                                        <Link to={`/detail/${prod.id}`}>
+                                                            <button className="btn btn-outline-primary btn-block">
+                                                                    VER MÁS
+                                                            </button>
+                                                        </Link>
+                                                    </div>
                                         </div>
                                     </div>
                 )}

@@ -22,7 +22,7 @@ function NavBar() {
                             <li className="nav-item dropdown">
                                 <NavLink to='/' className="nav-link  active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">JOYAS</NavLink>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><NavLink to='/' class="dropdown-item" href="#">ANILLOS</NavLink></li>
+                                    <li><NavLink to='/categoria/Anillos' class="dropdown-item" href="#">ANILLOS</NavLink></li>
                                     <li><NavLink to='/categoria/Collares' class="dropdown-item" href="#">COLLARES</NavLink></li>
                                     <li><NavLink to='/categoria/Aros' class="dropdown-item" href="#">AROS</NavLink></li>
                                 </ul>
